@@ -5,7 +5,7 @@ const app = Vue.createApp({
     };
   },
   watch: {
-    value() {
+    res() {
       const that = this;
       setTimeout(() => {
         that.value = 0;
@@ -15,12 +15,13 @@ const app = Vue.createApp({
   computed: {
     res() {
       let msg = "";
-      if (this.value <= 37) {
-        msg = "Not there yet";
+      if (this.value < 37) {
+        return "Not there yet";
+      } else if (this.value === 37) {
+        return this.value;
       } else {
-        msg = "Too much!";
+        return "Too much!";
       }
-      return this.value + " " + msg;
     },
   },
   methods: {
