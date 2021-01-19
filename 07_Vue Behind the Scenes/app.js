@@ -18,6 +18,7 @@ const app = Vue.createApp({
 app.mount("#app");
 
 const app2 = Vue.createApp({
+  template: `<p>{{ favoriteMeal }}</p>`,
   data() {
     return {
       favoriteMeal: "Pizza",
