@@ -8,18 +8,17 @@ const app = Vue.createApp({
   },
   computed: {
     classesP() {
-      return [this.classUser, this.visible ? "visible" : "hidden"];
+      return {
+        user1: this.classUser === "user1",
+        user2: this.classUser === "user2",
+        visible: this.visible,
+        hidden: !this.visible,
+      };
     },
   },
   methods: {
-    setClassUser(e) {
-      this.classUser = e.target.value;
-    },
     toggleVisible() {
       this.visible = !this.visible;
-    },
-    setColorInput(e) {
-      this.colorInput = e.targer.value;
     },
   },
 });
