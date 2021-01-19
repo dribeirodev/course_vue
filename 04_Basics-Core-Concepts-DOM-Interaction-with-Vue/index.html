@@ -17,9 +17,18 @@
       <h1>Vue Dynamic Styling</h1>
     </header>
     <section id="styling">
-      <div class="demo" :style="{borderColor: boxASelect ? 'red' : '#ccc'}" @click="boxSelect('A')"></div>
-      <div class="demo" @click="boxSelect('B')"></div>
-      <div class="demo" @click="boxSelect('C')"></div>
+      <div 
+        class="demo"
+        :class="{active: boxASelect}"
+        @click="boxSelect('A')"></div>
+      <div 
+        class="demo" 
+        :class="{active: boxBSelect}" 
+        @click="boxSelect('B')"></div>
+      <div 
+        class="demo"
+        :class="{active: boxCSelect}" 
+        @click="boxSelect('C')"></div>
     </section>
   </body>
 </html>
