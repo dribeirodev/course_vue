@@ -6,6 +6,11 @@ const app = Vue.createApp({
       visibleList: true,
     };
   },
+  computed: {
+    buttonCaption() {
+      return this.visibleList ? "Hide List" : "Show List";
+    },
+  },
   methods: {
     addItemList() {
       this.list.push(this.item);
