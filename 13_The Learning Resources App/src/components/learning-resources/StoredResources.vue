@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import LearningResources from './LearningResources.vue';
+import LearningResources from './LearningResources';
 
 export default {
   components: {
